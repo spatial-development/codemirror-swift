@@ -48,7 +48,7 @@ public struct CodeMirrorView: NativeView {
         #if os(OSX)
             webView.setValue(false, forKey: "drawsBackground")  // prevent white flicks
             webView.allowsMagnification = false
-        #elseif os(iOS)
+        #elseif os(iOS) || os(visionOS)
             webView.isOpaque = false
         #endif
 
